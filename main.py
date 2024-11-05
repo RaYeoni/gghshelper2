@@ -46,7 +46,7 @@ load_dotenv()
 # psycopg2 사용 예시
 import psycopg2
 
-DATABASE_URL = "postgres://<username>:<password>@<host>:<port>/<dbname>"
+DATABASE_URL = "postgresql://root:Cy8WNJpoqYYMJH8yivkTNy9snrn1K5g0@dpg-cskm2lrqf0us73cm5hr0-a.oregon-postgres.render.com:5432/gghshelper"
 
 conn = psycopg2.connect(DATABASE_URL)
 cur = conn.cursor()
