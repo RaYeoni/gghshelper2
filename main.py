@@ -43,6 +43,13 @@ from api.v1.routers import router as api_router
 # 이 함수는 해당 파일 내의 키-값 쌍을 환경 변수로 로드하는 데 사용됩니다.
 load_dotenv()
 
+# psycopg2 사용 예시
+import psycopg2
+
+DATABASE_URL = "postgres://<username>:<password>@<host>:<port>/<dbname>"
+
+conn = psycopg2.connect(DATABASE_URL)
+cur = conn.cursor()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
